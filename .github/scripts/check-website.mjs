@@ -8,6 +8,10 @@ const browser=await chromium.launch();
 const errors=[];
 try {
   const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1,reducedMotion:'reduce'});
+  const checkHeroRatio=async()=>assert.equal(await page.locator('.hero-image img').evaluate(image=>{
+    const bounds=image.getBoundingClientRect();
+    return Math.abs(bounds.width/bounds.height-image.naturalWidth/image.naturalHeight)<0.01;
+  }),true,'hero screenshot aspect ratio must match its source');
   page.on('pageerror',error=>errors.push(error.message));
   page.on('console',message=>{if(message.type()==='error')errors.push(message.text())});
   page.on('response',response=>{if(response.status()>=400)errors.push(`${response.status()} ${response.url()}`)});
@@ -19,6 +23,7 @@ try {
     await Promise.all(images.map(image=>{image.loading='eager';return image.decode().catch(()=>{})}));
     return images.filter(image=>!image.complete||!image.naturalWidth).map(image=>image.src);
   }),[],'broken images');
+  await checkHeroRatio();
   assert.deepEqual(await page.locator('a[href^="#"]').evaluateAll(links=>links.map(link=>link.getAttribute('href')).filter(href=>href!=='#'&&!document.getElementById(href.slice(1)))),[],'missing section anchors');
   for(const app of ['weather','music','calculator','todo','calendar']) {
     await page.locator(`#tab-${app}`).click();
@@ -46,6 +51,7 @@ try {
   await page.evaluate(()=>scrollTo(0,0));
   await page.screenshot({path:`${output}/desktop.png`,fullPage:true});
   await page.setViewportSize({width:390,height:844});
+  await checkHeroRatio();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'mobile horizontal overflow');
   await page.locator('#tab-music').click();
   assert.equal(await page.locator('#tab-music').getAttribute('aria-selected'),'true');
