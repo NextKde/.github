@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="NextKDE：为 KDE Plasma 打造的开源桌面体验。探索液态玻璃桌面，以及日历、天气、KMusic、计算器和待办。">
+  <meta property="og:title" content="NextKDE · 让日常，有所不同。">
+  <meta property="og:description" content="一个桌面，一整套日常。为 KDE Plasma 打造的开源桌面与应用。">
+  <meta property="og:image" content="https://nextkde.github.io/.github/assets/desktop.png">
+  <title>NextKDE · 让日常，有所不同。</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">跳至主要内容</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="主导航">
+      <a class="brand" href="#" aria-label="NextKDE 首页"><img src="assets/logo.svg" width="27" height="27" alt=""><span>NextKDE</span></a>
+      <div class="nav-links"><a href="#desktop" data-i18n="desktop">桌面</a><a href="#apps" data-i18n="apps">应用</a><a href="#music" data-i18n="music">音乐</a><a href="https://github.com/NextKde" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <div class="nav-actions"><button id="language" class="language" aria-label="Switch to English">EN</button><a class="button small" href="#start" data-i18n="start">开始体验</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <p class="eyebrow">KDE PLASMA. A NEW PERSPECTIVE.</p>
+      <h1 data-i18n="heroTitle">让日常，<br><span>有所不同。</span></h1>
+      <p class="hero-copy" data-i18n="heroCopy">熟悉的 Linux，自成一格的桌面。<br>从第一眼的通透，到每一天的顺手。</p>
+      <div class="hero-actions"><a class="button" href="#start" data-i18n="getNext">开始使用 NextKDE</a><a class="text-link" href="#apps" data-i18n="exploreApps">探索全家桶 <span>↗</span></a></div>
+      <div class="hero-image reveal">
+        <button class="image-button" data-image="assets/desktop.png" data-caption="NextKDE Desktop" aria-label="放大桌面截图"><img src="assets/desktop.png" width="3840" height="2160" fetchpriority="high" alt="NextKDE 实际桌面截图：顶栏、浮动 Dock、桌面组件和外观设置"></button>
+      </div>
+      <p class="image-note" data-i18n="heroNote">NextKDE 桌面实际截图 · KDE Plasma / Wayland</p>
+    </section>
+    <section id="desktop" class="section wrap">
+      <div class="section-heading reveal"><p class="eyebrow" data-i18n="desktopEyebrow">为桌面，重新想一想。</p><h2 data-i18n="desktopTitle">轻盈的外观。<br>完整的日常。</h2><p class="section-copy" data-i18n="desktopCopy">把顶栏、Dock、启动器、通知与桌面组件融为一体。<br>让你常用的东西，各就各位。</p></div>
+      <div class="feature-grid">
+        <article class="feature glass reveal"><div class="material-orbs" aria-hidden="true"><span></span><span></span><span></span><div class="glass-panel"><i></i><i></i><i></i></div></div><div><p class="eyebrow">LIQUID GLASS</p><h3 data-i18n="glassTitle">通透，自有层次。</h3><p data-i18n="glassCopy">液态玻璃、柔光与磨砂材质。喜欢清晰的色彩？也有 Material 外观。</p></div></article>
+        <article class="feature essentials reveal"><div class="dock-art" aria-hidden="true"><img src="assets/icons/calendar.svg" alt=""><img src="assets/icons/weather.svg" alt=""><img src="assets/icons/music.svg" alt=""><img src="assets/icons/calculator.svg" alt=""></div><div><p class="eyebrow">EVERYTHING IN ITS PLACE</p><h3 data-i18n="essentialsTitle">从这里，进入状态。</h3><p data-i18n="essentialsCopy">浮动 Dock、应用搜索、全屏启动器与控制中心，让常用操作触手可及。</p></div></article>
+      </div>
+    </section>
+    <section id="apps" class="section apps-section">
+      <div class="wrap">
+        <div class="section-heading reveal"><p class="eyebrow" data-i18n="appsEyebrow">一个桌面，一整套日常。</p><h2 data-i18n="appsTitle">各有所长。<br>也很合得来。</h2><p class="section-copy" data-i18n="appsCopy">规划一天，看看天气，听一首喜欢的歌。<br>认识 NextKDE 的独立应用。</p></div>
+        <div class="app-selector" role="tablist" aria-label="选择应用">
+          <button id="tab-calendar" role="tab" aria-controls="app-panel" aria-selected="true" tabindex="0" data-app="calendar"><img src="assets/icons/calendar.svg" alt=""><span data-i18n="calendar">日历</span></button>
+          <button id="tab-weather" role="tab" aria-controls="app-panel" aria-selected="false" tabindex="-1" data-app="weather"><img src="assets/icons/weather.svg" alt=""><span data-i18n="weather">天气</span></button>
+          <button id="tab-music" role="tab" aria-controls="app-panel" aria-selected="false" tabindex="-1" data-app="music"><img src="assets/icons/music.svg" alt=""><span>KMusic</span></button>
+          <button id="tab-calculator" role="tab" aria-controls="app-panel" aria-selected="false" tabindex="-1" data-app="calculator"><img src="assets/icons/calculator.svg" alt=""><span data-i18n="calculator">计算器</span></button>
+          <button id="tab-todo" role="tab" aria-controls="app-panel" aria-selected="false" tabindex="-1" data-app="todo"><img src="assets/icons/todo.svg" alt=""><span data-i18n="todo">待办</span></button>
+        </div>
+        <div id="app-panel" class="app-panel" role="tabpanel" aria-labelledby="tab-calendar" tabindex="0">
+          <div class="app-visual" data-tone="calendar"><img id="app-icon" src="assets/icons/calendar.svg" width="180" height="180" alt="日历应用图标"><span id="app-wordmark">Calendar</span></div>
+          <div class="app-description"><p class="eyebrow" id="app-label">CALENDAR</p><h3 id="app-title">让每一天，<br>有条不紊。</h3><p id="app-copy">用日历安排日程，与待办共享 PIM 服务。计划与行动，都有自己的位置。</p><a class="text-link" id="app-link" href="https://github.com/NextKde/NextKde/tree/main/apps/calendar">了解日历 ↗</a></div>
+        </div>
+        <p class="apps-note" data-i18n="appsNote">日历、天气、计算器和待办为可选独立应用。KMusic 单独安装，目前为开发预览版。</p>
+      </div>
+    </section>
+    <section id="music" class="section music-section">
+      <div class="wrap">
+        <div class="music-heading reveal"><p class="eyebrow">MEET KMUSIC</p><h2 data-i18n="musicTitle">给喜欢的音乐，<br>一个好位置。</h2><p data-i18n="musicCopy">在线发现、本地音乐与自己的音乐服务器。<br>让不同来源的音乐，在一个原生播放器里相遇。</p><a class="text-link" href="https://github.com/NextKde/KMusic" data-i18n="discoverMusic">探索 KMusic ↗</a></div>
+        <div class="music-shot reveal"><button class="image-button" data-image="assets/kmusic.png" data-caption="KMusic · Discover" aria-label="放大 KMusic 截图"><img src="assets/kmusic.png" loading="lazy" alt="KMusic 发现页实际截图，展示音乐内容和播放器"></button></div>
+        <p class="image-note" data-i18n="musicNote">KMusic 项目实际截图 · 开发预览版</p>
+      </div>
+    </section>
+    <section class="section open-section wrap">
+      <div class="section-heading reveal"><p class="eyebrow">OPEN BY NATURE</p><h2 data-i18n="openTitle">你的桌面。<br>也可以有你的想法。</h2><p class="section-copy" data-i18n="openCopy">探索源码，提出建议，或一起打磨下一个细节。<br>NextKDE 在开放中持续生长。</p><a class="text-link" href="https://github.com/NextKde/NextKde" data-i18n="source">在 GitHub 探索源码 ↗</a></div>
+      <div class="repo-links"><a href="https://github.com/NextKde/nextkdeAppDemo"><strong>NextKDE App Demo</strong><span data-i18n="demoCopy">共享组件与应用布局示例 ↗</span></a><a href="https://github.com/NextKde/depthrelease"><strong>Depth resources</strong><span data-i18n="depthCopy">空间与景深壁纸资源项目 ↗</span></a></div>
+    </section>
+    <section id="start" class="section start-section">
+      <div class="wrap"><img src="assets/logo.svg" width="66" height="66" alt=""><h2 data-i18n="startTitle">从你的下一次登录开始。</h2><p data-i18n="startCopy">适用于 KDE Plasma 6 / Wayland。<br>按发行版准备依赖，再跟随指南安装。</p><div class="hero-actions"><a id="install-link" class="button" href="https://github.com/NextKde/NextKde/blob/main/docs/GettingStarted.zh-CN.md" data-i18n="install">查看安装指南</a><a class="text-link" href="https://github.com/NextKde/NextKde/releases" data-i18n="releases">浏览版本 ↗</a></div><p class="compatibility">KWin 6.6+ <span>·</span> Quickshell 0.3.x <span>·</span> Qt 6.6+</p></div>
+    </section>
+  </main>
+  <footer class="wrap"><a class="brand" href="#">NextKDE</a><p data-i18n="footerCopy">为 KDE Plasma 打造。由开源社区共同创造。</p><div><a href="https://github.com/NextKde/NextKde/issues" data-i18n="feedback">反馈</a><a href="https://github.com/NextKde/NextKde/blob/main/LICENSE" data-i18n="license">许可</a><a href="https://github.com/NextKde">GitHub ↗</a></div></footer>
+  <dialog id="lightbox" aria-label="截图预览"><button id="close-lightbox" aria-label="关闭截图预览">×</button><img id="lightbox-image" alt=""><p id="lightbox-caption"></p></dialog>
+</body>
+</html>

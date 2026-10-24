@@ -1,0 +1,53 @@
+name: Website
+
+on:
+  push:
+    branches: [main]
+    paths: ['website/**', '.github/workflows/website.yml', '.github/scripts/check-website.mjs']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: organization-website
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Install browser test tools on the hosted runner
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.64.1
+          npx playwright install --with-deps chromium
+      - name: Check desktop and mobile interactions
+        run: |
+          mkdir -p .site-preview/.github
+          cp -a website/. .site-preview/.github/
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory .site-preview > /tmp/website-http.log 2>&1 &
+          node .github/scripts/check-website.mjs
+      - name: Upload browser screenshots and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: website-browser-checks
+          path: website-test-results/
+          if-no-files-found: warn
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: website
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v5
