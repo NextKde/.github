@@ -15,7 +15,10 @@ try {
   await page.locator('#main').waitFor();
   assert.equal(await page.locator('h1').count(),1);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'desktop horizontal overflow');
-  assert.deepEqual(await page.locator('img').evaluateAll(images=>images.filter(image=>!image.complete||!image.naturalWidth).map(image=>image.src)),[],'broken images');
+  assert.deepEqual(await page.locator('img[src]').evaluateAll(async images=>{
+    await Promise.all(images.map(image=>{image.loading='eager';return image.decode().catch(()=>{})}));
+    return images.filter(image=>!image.complete||!image.naturalWidth).map(image=>image.src);
+  }),[],'broken images');
   assert.deepEqual(await page.locator('a[href^="#"]').evaluateAll(links=>links.map(link=>link.getAttribute('href')).filter(href=>href!=='#'&&!document.getElementById(href.slice(1)))),[],'missing section anchors');
   for(const app of ['weather','music','calculator','todo','calendar']) {
     await page.locator(`#tab-${app}`).click();
