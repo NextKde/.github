@@ -1,8 +1,1357 @@
 @charset "UTF-8";
-img{height:auto}
-:root{--ink:#1d1d1f;--muted:#6e6e73;--paper:#fff;--soft:#f5f5f7;--blue:#0071e3;--line:#d2d2d7;--font:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;color-scheme:light}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}img{max-width:100%;display:block}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #0071e3;outline-offset:5px}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:650;letter-spacing:-.055em}.wrap{width:min(1120px,calc(100% - 64px));margin-inline:auto}.skip{position:fixed;top:-60px;left:20px;z-index:100;background:#fff;padding:12px;border-radius:8px}.skip:focus{top:10px}.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:blur(22px);border-bottom:1px solid #e8e8ed}.nav{height:66px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:9px;font-size:21px;font-weight:650;letter-spacing:-.035em}.nav-links,.nav-actions{display:flex;align-items:center;gap:28px}.nav-links{font-size:12px}.nav-links a:hover{color:var(--blue)}.nav-actions{gap:16px}.language{background:none;border:0;font-size:12px;padding:9px;color:var(--muted)}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 23px;background:var(--blue);color:white;border-radius:30px;font-size:15px;transition:background .2s,transform .2s}.button:hover{background:#0077ed;transform:translateY(-1px)}.button.small{font-size:12px;min-height:30px;padding:7px 15px}.hero{text-align:center;padding-top:80px}.eyebrow{font-size:12px;font-weight:650;letter-spacing:.14em}.hero .eyebrow{color:var(--muted);margin-bottom:24px}.hero h1{font-size:clamp(64px,7.5vw,104px);line-height:1.13}.hero h1 span{color:#6e6e73}.hero-copy{font-size:21px;line-height:1.75;margin-top:27px;color:var(--muted);letter-spacing:-.015em}.hero-actions{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:30px}.text-link{color:var(--blue);font-size:17px}.text-link:hover{text-decoration:underline;text-underline-offset:5px}.hero-image{margin-top:64px;position:relative}.hero-image:before{content:"";position:absolute;inset:8% -3% -2%;background:#c8dfe5;filter:blur(70px);opacity:.55;z-index:-1}.image-button{padding:0;border:0;background:none;display:block;width:100%;cursor:zoom-in;border-radius:14px;overflow:hidden}.hero-image .image-button{border:1px solid #00000018;box-shadow:0 25px 60px #22364424}.image-note{font-size:11px;line-height:1.7;color:var(--muted);text-align:center;margin-top:18px}.section{padding-block:120px;scroll-margin-top:0}.section-heading{max-width:760px}.section-heading .eyebrow{color:var(--muted);margin-bottom:22px}h2{font-size:clamp(42px,5.5vw,70px);line-height:1.19}.section-copy{font-size:20px;line-height:1.8;margin-top:25px;color:var(--muted)}.section-heading>.text-link{display:inline-block;margin-top:26px}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}.feature{border-radius:28px;background:var(--soft);min-height:455px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}.feature>div:last-child{padding:0 38px 38px}.feature .eyebrow{font-size:10px;color:var(--muted);margin-bottom:14px}.feature h3{font-size:31px;line-height:1.3;letter-spacing:-.04em}.feature p:not(.eyebrow){font-size:16px;color:var(--muted);line-height:1.75;margin-top:14px;max-width:350px}.material-orbs{position:relative;height:250px;overflow:hidden}.material-orbs>span{position:absolute;width:145px;height:145px;border-radius:50%;top:43px;background:linear-gradient(130deg,#acc9f0,#526e9a);left:12%;box-shadow:inset -10px -15px 40px #00000012}.material-orbs>span:nth-child(2){left:40%;top:23px;background:linear-gradient(145deg,#f4dcd0,#c69179)}.material-orbs>span:nth-child(3){left:64%;top:88px;width:90px;height:90px;background:linear-gradient(145deg,#b4d8cd,#679b88)}.glass-panel{position:absolute;left:19%;top:85px;width:63%;height:120px;transform:rotate(-8deg);border-radius:25px;border:1px solid #ffffffcc;background:#ffffff50;backdrop-filter:blur(18px);box-shadow:5px 20px 40px #253c5525;display:flex;align-items:center;justify-content:center;gap:20px}.glass-panel i{width:42px;height:42px;border-radius:14px;background:#ffffff85;box-shadow:inset 0 1px #fff}.essentials{background:#f0f3f7}.dock-art{display:flex;gap:16px;margin:85px 34px 50px;padding:18px 20px;border:1px solid #fff;background:#ffffff95;box-shadow:0 18px 36px #33476412;border-radius:24px;transform:rotate(-5deg)}.dock-art img{width:calc((100% - 48px)/4);filter:drop-shadow(0 7px 7px #00000015)}.apps-section{background:var(--soft)}.app-selector{display:flex;justify-content:center;gap:32px;margin-top:60px;border-bottom:1px solid #dedee2}.app-selector button{position:relative;background:none;border:0;padding:12px 16px 22px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:12px;font-size:14px;min-width:90px}.app-selector img{width:52px;height:52px;transition:transform .25s}.app-selector button:hover img{transform:translateY(-5px)}.app-selector button[aria-selected=true]{color:var(--ink)}.app-selector button[aria-selected=true]:after{position:absolute;content:"";height:2px;background:var(--ink);bottom:-1px;left:15px;right:15px}.app-panel{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:#fff;border-radius:28px;margin-top:32px;min-height:430px;overflow:hidden}.app-visual{height:100%;min-height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;background:radial-gradient(ellipse at 50% 50%,#ffe6dd,transparent 65%)}.app-visual img{width:160px;height:160px;filter:drop-shadow(0 18px 24px #8e5e3b24)}.app-visual span{font-size:28px;letter-spacing:-.04em;font-weight:600;color:#614b40}.app-visual[data-tone=weather]{background:radial-gradient(ellipse at 50% 50%,#d6ebfa,transparent 65%)}.app-visual[data-tone=music]{background:radial-gradient(ellipse at 50% 50%,#f8dce3,transparent 65%)}.app-visual[data-tone=calculator]{background:radial-gradient(ellipse at 50% 50%,#ffecc5,transparent 65%)}.app-visual[data-tone=todo]{background:radial-gradient(ellipse at 50% 50%,#e9e0fa,transparent 65%)}.app-description{padding:55px 56px 55px 25px}.app-description .eyebrow{font-size:11px;color:var(--muted);margin-bottom:20px}.app-description h3{font-size:42px;line-height:1.25}.app-description>p:not(.eyebrow){font-size:17px;line-height:1.85;color:var(--muted);margin:22px 0}.apps-note{font-size:12px;color:var(--muted);text-align:center;line-height:1.8;margin:26px 15px 0}.music-section{background:#121214;color:#f5f5f7;overflow:hidden}.music-heading{text-align:center}.music-heading .eyebrow{color:#ed9cba;margin-bottom:26px}.music-heading h2{font-size:clamp(44px,5.5vw,76px)}.music-heading>p:not(.eyebrow){font-size:20px;line-height:1.8;color:#a1a1a6;margin-top:26px}.music-heading .text-link{display:inline-block;margin-top:28px;color:#70b9ff}.music-shot{margin-top:58px;border-radius:18px;box-shadow:0 0 90px #a46c821a;overflow:hidden}.music-shot .image-button{border-radius:18px}.music-section .image-note{color:#92929b}.open-section{text-align:center}.open-section .section-heading{margin-inline:auto}.repo-links{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:840px;margin:58px auto 0;text-align:left}.repo-links a{background:var(--soft);border-radius:20px;padding:28px}.repo-links strong{font-size:19px;letter-spacing:-.02em;display:block}.repo-links span{font-size:13px;line-height:1.7;color:var(--muted);display:block;margin-top:12px}.repo-links a:hover strong{color:var(--blue)}.start-section{background:var(--soft);text-align:center}.start-section img{margin:0 auto 30px}.start-section h2{font-size:clamp(35px,4.8vw,58px)}.start-section p{font-size:18px;line-height:1.8;color:var(--muted);margin-top:24px}.start-section .compatibility{font-size:12px;margin-top:32px}.compatibility span{margin:0 12px}footer{display:flex;gap:28px;align-items:center;justify-content:space-between;padding-block:35px}footer>.brand{font-size:17px}footer p{color:var(--muted);font-size:11px}footer>div{display:flex;gap:22px;font-size:11px;color:var(--muted)}dialog{position:fixed;border:0;background:#151517;color:#fff;padding:45px 24px 25px;border-radius:18px;width:min(1400px,96vw);max-width:96vw;max-height:94vh;overflow:auto}dialog::backdrop{background:#000b;backdrop-filter:blur(12px)}dialog img{max-height:78vh;max-width:100%;object-fit:contain;margin:auto}dialog p{font-size:12px;color:#c2c2c9;margin-top:16px;text-align:center}#close-lightbox{position:absolute;right:13px;top:8px;border:0;background:none;color:#fff;font-size:30px;padding:0 8px}.reveal{opacity:1}.motion-ready .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.motion-ready .reveal.in-view{opacity:1;transform:none}
-@media(min-width:1500px){.hero{padding-top:110px}}
-@media(max-width:800px){.wrap{width:calc(100% - 40px)}.nav{gap:10px;height:60px}.nav-links{gap:16px}.nav-links a:nth-child(3){display:none}.nav-actions{gap:5px}.nav .brand{font-size:18px}.nav .brand img{width:23px;height:23px}.hero{padding-top:64px}.hero h1{font-size:72px}.hero-copy{font-size:18px}.hero-image{margin-top:45px}.section{padding-block:85px}.section-copy{font-size:18px}.feature-grid{gap:16px}.feature>div:last-child{padding:0 25px 30px}.feature h3{font-size:26px}.feature p:not(.eyebrow){font-size:14px}.dock-art{margin:85px 15px 50px;gap:8px;padding:14px}.dock-art img{width:calc((100% - 24px)/4)}.feature{min-height:420px}.app-selector{gap:8px}.app-selector button{min-width:75px;padding-inline:10px}.app-description{padding:35px 30px 35px 10px}.app-description h3{font-size:33px}.app-description>p:not(.eyebrow){font-size:15px}.app-visual img{width:135px;height:135px}.app-panel,.app-visual{min-height:380px}footer{flex-wrap:wrap;gap:20px}footer p{order:3;width:100%}}
-@media(max-width:540px){.wrap{width:calc(100% - 32px)}.nav-links{display:none}.hero h1{font-size:60px}.hero .eyebrow{font-size:9px;letter-spacing:.12em}.hero-copy{font-size:16px}.hero-actions{gap:20px}.hero-actions .text-link{font-size:14px}.hero-actions .button{font-size:14px;padding-inline:18px}.hero-image{margin-top:40px}.image-button{border-radius:9px}.section{padding-block:72px}.section-heading .eyebrow{font-size:10px}h2{font-size:43px}.section-copy{font-size:16px}.section-copy br{display:none}.feature-grid{grid-template-columns:1fr;margin-top:38px}.feature{min-height:390px}.feature>div:last-child{padding:0 28px 30px}.feature h3{font-size:29px}.feature p:not(.eyebrow){font-size:16px}.material-orbs{height:230px}.dock-art{max-width:310px;align-self:center;gap:12px;margin:65px 25px 50px;padding:17px}.dock-art img{width:calc((100% - 36px)/4)}.app-selector{gap:0;justify-content:space-between;margin-top:36px}.app-selector button{min-width:0;width:20%;padding:10px 4px 20px;font-size:11px;gap:10px}.app-selector img{width:42px;height:42px}.app-panel{grid-template-columns:1fr}.app-visual{min-height:250px;gap:16px}.app-visual img{width:125px;height:125px}.app-visual span{font-size:23px}.app-description{padding:10px 30px 38px}.app-description h3{font-size:33px}.app-description h3 br{display:none}.app-description>p:not(.eyebrow){font-size:16px;margin:16px 0}.music-heading>p:not(.eyebrow){font-size:16px}.music-heading>p br{display:none}.music-shot{margin-top:40px}.repo-links{grid-template-columns:1fr;gap:14px;margin-top:40px}.repo-links a{padding:24px}.start-section p{font-size:16px}.start-section .compatibility{font-size:10px}.compatibility span{margin-inline:5px}footer>div{gap:16px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.motion-ready .reveal{opacity:1;transform:none}}
+
+/* -------------------------------------------------------------------------
+   0. Typeface
+   Self-hosted so every platform measures the same glyphs. Inter Display is
+   used for display sizes, Inter Variable for text; both under OFL.
+   ------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family: "Inter Variable";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable-Italic.woff2") format("woff2-variations");
+}
+/* One display weight covers every heading on the page. The bold face was
+   111 KB for a weight nothing asked for; it stays out until something does. */
+@font-face {
+  font-family: "Inter Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/InterDisplay-SemiBold.woff2") format("woff2");
+}
+
+/* =========================================================================
+   NextKDE 0.1.1 — release page
+   Structure follows an OS release page; every floating surface is cut
+   from one glass recipe (see --glass-* below). Dark-only, like the
+   product it describes.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. Tokens
+   ------------------------------------------------------------------------- */
+:root {
+  /* Surfaces */
+  --bg: #000;
+  --bg-raise: #0b0b0d;
+  --bg-panel: #131316;
+  --line: rgba(255, 255, 255, .1);
+  --line-strong: rgba(255, 255, 255, .2);
+
+  /* Type */
+  --ink: #f5f5f7;
+  --ink-2: rgba(245, 245, 247, .72);
+  --ink-3: rgba(245, 245, 247, .48);
+  --ink-4: rgba(245, 245, 247, .3);
+
+  /* Apple alternates dark and light bands down the page; these are its
+     measured values (#000, #1d1d1f, #f5f5f7). */
+  --band-dark: #000;
+  --band-raised: #1d1d1f;
+  --band-light: #f5f5f7;
+  --ink-on-light: #1d1d1f;
+  --ink-on-light-2: #6e6e73;
+
+  /* Accents */
+  --accent: #2997ff;
+  --accent-strong: #0071e3;
+  --accent-warm: #e0a08a;
+  --accent-cool: #7ea6e0;
+  --accent-green: #74b39c;
+
+  /* Self-hosted Inter: the old -apple-system stack resolved to nothing on
+     Linux and silently fell back to a different face than the tracking was
+     designed for. Noto Sans CJK carries the Chinese; it is listed after Inter
+     so Latin glyphs keep Inter's metrics inside mixed runs. */
+  --font: "Inter Variable", "Inter", "Noto Sans CJK SC", "Noto Sans SC",
+          "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: "Inter Display", "Inter Variable", "Inter",
+                  "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC",
+                  "Microsoft YaHei", system-ui, sans-serif;
+
+  /* Type scale, measured off apple.com/os/macos (1440px viewport).
+     Apple's page is far calmer than a poster: the section headline is 48px,
+     the eyebrow above it is the large 21px item, and body text is 17px. */
+  --t-display: clamp(2rem, 3.4vw, 3rem);        /* 48px */
+  --t-eyebrow: clamp(1.0625rem, 1.45vw, 1.3125rem); /* 21px */
+  --t-lead: clamp(1.125rem, 1.6vw, 1.75rem);    /* 28px */
+  --t-h2: var(--t-display);
+  --t-h3: clamp(1.375rem, 1.7vw, 1.5rem);       /* 22-24px */
+  --t-body: clamp(.9375rem, 1.05vw, 1.0625rem); /* 15-17px */
+  --t-small: .8125rem;
+  --t-micro: .6875rem;
+
+  /* Tracking is per-role, not per-language hack: Apple tightens display type
+     only a hair (-0.003em) and opens the eyebrow (+0.011em). */
+  --ls-display: -.003em;
+  --ls-eyebrow: .011em;
+  --ls-text: -.022em;
+
+  /* Rhythm */
+  --gutter: clamp(20px, 4vw, 48px);
+  --measure: 1024px;
+  --wide: 1280px;
+  --section-y: clamp(72px, 11vw, 152px);
+
+  --nav-h: 44px;
+  --subnav-h: 60px;
+  --radius: clamp(16px, 2.2vw, 24px);
+  --radius-lg: clamp(20px, 3vw, 32px);
+
+  /* The glass recipe. Every translucent surface composes from these. */
+  --glass-bg: rgba(255, 255, 255, .08);
+  --glass-bg-strong: rgba(255, 255, 255, .14);
+  --glass-border: rgba(255, 255, 255, .16);
+  --glass-specular: rgba(255, 255, 255, .55);
+  --glass-blur: clamp(18px, 2.4vw, 30px);
+  --glass-sat: 180%;
+
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-apple: cubic-bezier(.32, .72, 0, 1);
+
+  color-scheme: dark;
+  accent-color: var(--accent);
+}
+
+/* -------------------------------------------------------------------------
+   2. Base
+   ------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;          /* sections carry their own scroll-margin */
+  -webkit-text-size-adjust: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--t-body);
+  line-height: 1.47;
+  letter-spacing: var(--ls-text);
+  letter-spacing: .002em;
+  font-optical-sizing: auto;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: rgba(41, 151, 255, .35); color: #fff; }
+
+/* An English system must never flash the Chinese source text: the copy stays
+   hidden until site.js has swapped it in. No-JS users still see content. */
+html[data-lang-pending] body > :not(.skip):not(.grain) { visibility: hidden; }
+
+h1, h2, h3, h4, p, figure, dl, dd, ul { margin: 0; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-wrap: balance;
+}
+h1, h2 { font-size: var(--t-h2); line-height: 1.083; letter-spacing: var(--ls-display); }
+h3 { font-size: var(--t-h3); line-height: 1.25; letter-spacing: -.01em; }
+
+/* CJK needs the inverse treatment: no negative tracking, looser leading. */
+html:lang(zh-CN) h1, html:lang(zh-CN) h2 {
+  letter-spacing: 0;
+  line-height: 1.18;
+  font-variant-numeric: tabular-nums;   /* keep 0.1.1 readable, not 0.11 */
+}
+html:lang(zh-CN) h3 { letter-spacing: 0; }
+html:lang(zh-CN) .eyebrow { letter-spacing: .04em; }
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; }
+ul { list-style: none; padding: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 980px;
+}
+
+/* -------------------------------------------------------------------------
+   3. Layout primitives
+   ------------------------------------------------------------------------- */
+.wrap {
+  width: min(var(--measure), 100% - var(--gutter) * 2);
+  margin-inline: auto;
+}
+
+.skip {
+  position: fixed; top: -80px; left: 16px; z-index: 200;
+  padding: 10px 18px; border-radius: 980px;
+  background: #fff; color: #000; font-size: var(--t-small);
+  transition: top .2s var(--ease-out);
+}
+.skip:focus { top: 12px; }
+
+/* Fine film grain: keeps large dark gradients from banding */
+.grain {
+  position: fixed; inset: 0; z-index: 1;
+  pointer-events: none;
+  opacity: .028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* -------------------------------------------------------------------------
+   4. Glass primitives
+   ------------------------------------------------------------------------- */
+.pill,
+.stage-controls,
+.tile {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 1px 0 var(--glass-specular),
+    inset 0 -1px 0 rgba(255, 255, 255, .06),
+    0 12px 32px -16px rgba(0, 0, 0, .8);
+}
+
+/* -------------------------------------------------------------------------
+   5. Navigation
+   ------------------------------------------------------------------------- */
+/* Measured on apple.com/os/macos: the global Apple bar is not pinned at all —
+   it scrolls away, and only the 60px capsule bar stays. Two stacked sticky
+   bars take 105px of a phone screen and read as a web template. */
+.global-nav {
+  position: relative; z-index: 60;
+  height: var(--nav-h);
+  /* Opaque enough that long paragraphs never ghost through the bar while
+     scrolling; the blur alone is not enough on a phone-width screen. */
+  background: rgba(22, 22, 23, .8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+/* Hairline appears only once the page scrolls, so the hero stays open */
+.global-nav::after {
+  content: "";
+  position: absolute; inset: auto 0 0;
+  height: 1px;
+  background: var(--line);
+  opacity: 0;
+  transition: opacity .3s var(--ease-out);
+}
+body.is-scrolled .global-nav::after { opacity: 1; }
+
+/* The bar crosses light and dark bands; it takes the band's polarity rather
+   than staying a grey scrim over everything. */
+html[data-band="light"] .global-nav {
+  background: rgba(245, 245, 247, .82);
+  color: var(--ink-on-light);
+}
+html[data-band="light"] .global-nav .nav-links a,
+html[data-band="light"] .global-nav .language { color: var(--ink-on-light-2); }
+html[data-band="light"] .global-nav .nav-links a:hover,
+html[data-band="light"] .global-nav .language:hover { color: var(--ink-on-light); }
+html[data-band="light"] .global-nav .brand img { filter: none; }
+html[data-band="light"] .sub-nav { background: rgba(255, 255, 255, .8); }
+html[data-band="light"] .sub-nav .pill {
+  background: rgba(232, 232, 237, .5);
+  border-color: rgb(210, 210, 215);
+  color: rgba(0, 0, 0, .8);
+}
+html[data-band="light"] .sub-nav .pill:hover { background: rgba(232, 232, 237, .9); }
+html[data-band="light"] .sub-nav .pill[aria-selected="true"] {
+  background: #1d1d1f; color: #fff;
+}
+html[data-band="light"] .sub-nav .pill-link img { filter: none; }
+
+.nav {
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: clamp(12px, 3vw, 32px);
+  font-size: .75rem;
+}
+.brand {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--font-display);
+  font-size: .9375rem; font-weight: 600; letter-spacing: -.012em;
+  white-space: nowrap;
+}
+.brand img { filter: invert(1) brightness(1.9); }
+.nav-links { display: flex; gap: clamp(14px, 2.4vw, 28px); }
+.nav-links a, .language {
+  color: var(--ink-2);
+  transition: color .18s ease;
+}
+.nav-links a:hover, .language:hover { color: var(--ink); }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.language { padding: 6px 2px; font-size: .75rem; letter-spacing: .02em; }
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 40px; padding: 9px 20px;
+  border-radius: 980px;
+  background: var(--accent-strong);
+  color: #fff;
+  font-size: .9375rem; letter-spacing: -.002em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22), 0 6px 20px -10px rgba(0, 113, 227, .9);
+  transition: background-color .2s ease, transform .12s var(--ease-out), box-shadow .2s ease;
+}
+.button:hover { background: #1482f0; }
+.button:active { transform: scale(.97); box-shadow: inset 0 1px 0 rgba(255,255,255,.22); }
+.button.small { min-height: 28px; padding: 4px 13px; font-size: .75rem; }
+
+.link {
+  display: inline-flex; align-items: baseline; gap: .32em;
+  color: var(--accent);
+  font-size: var(--t-lead);
+}
+.link:hover { text-decoration: underline; text-underline-offset: .28em; text-decoration-thickness: 1px; }
+/* Chevron that nudges on hover — a small courtesy, not an animation */
+.link.arrow::after {
+  content: "›";
+  font-size: 1.12em; line-height: 1;
+  transition: transform .25s var(--ease-out);
+}
+.link.arrow:hover::after { transform: translateX(3px); }
+
+/* Sub nav: a row of independent glass capsules */
+/* Apple's localnav wrapper is rgba(0,0,0,.6) + blur(20px) at 60px tall;
+   these are those values, from the live page. */
+.sub-nav {
+  position: sticky; top: 0; z-index: 55;
+  /* 36px capsule + 1px wrapper padding = Apple's 60px bar */
+  padding-block: 11px;
+  background: rgba(0, 0, 0, .6);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+.sub-nav-inner {
+  width: min(var(--measure), 100% - var(--gutter) * 2);
+  margin-inline: auto;
+  display: flex; justify-content: center; gap: 9px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1px;
+  mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+}
+.sub-nav-inner::-webkit-scrollbar { display: none; }
+
+.pill {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 15px;
+  border-radius: 18px;
+  font-size: .8125rem; line-height: 18px; letter-spacing: .002em;
+  color: var(--ink);
+  white-space: nowrap;
+  transition: background-color .2s ease, transform .12s var(--ease-out), color .2s ease, box-shadow .2s ease;
+}
+.pill:hover { background: var(--glass-bg-strong); }
+.pill:active { transform: scale(.97); }
+.pill[aria-selected="true"] {
+  background: #f5f5f7;
+  color: #0a0a0a;
+  border-color: transparent;
+  box-shadow: 0 4px 16px -6px rgba(255, 255, 255, .45);
+}
+.pill-link img { filter: invert(1) brightness(1.9); }
+.pill-link[aria-selected="true"] img { filter: none; }
+
+/* -------------------------------------------------------------------------
+   6. Hero
+   ------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  scroll-margin-top: var(--subnav-h);
+  padding: clamp(44px, 7vw, 88px) 0 0;
+  text-align: center;
+  isolation: isolate;
+  overflow: clip;
+}
+/* A single neutral wash, the way a lit room falls on the top of a page.
+   Colour here was the tell: a rainbow halo behind the headline reads as a
+   template, not as product photography. */
+.hero-halo {
+  position: absolute; z-index: -1;
+  inset: -10% 0 auto;              /* stay inside the viewport: no horizontal scroll */
+  height: 900px;
+  background: radial-gradient(52% 46% at 50% 0%, rgba(255, 255, 255, .09), transparent 72%);
+  pointer-events: none;
+}
+.hero-copy { position: relative; z-index: 2; }
+.version {
+  font-size: .9375rem; font-weight: 600;
+  letter-spacing: -.004em;
+  margin-bottom: 12px;
+}
+/* The second line steps back in tone, not in colour: a headline is one
+   statement, and a gradient across it competes with the capture below. */
+.hero h1 .sheen { color: #86868b; }
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero h1 .sheen { color: #86868b; background: none; animation: none; }
+}
+.hero-note {
+  margin-top: clamp(14px, 2vw, 20px);
+  font-size: var(--t-lead);
+  color: var(--ink-2);
+}
+
+/* Device + floating glass cards. The device is a CSS browser-less screen. */
+.hero-stage {
+  position: relative;
+  width: min(var(--wide), 100% - var(--gutter) * 2);
+  margin: clamp(40px, 6vw, 72px) auto 0;
+  padding-bottom: clamp(28px, 5vw, 64px);
+}
+.device { position: relative; }
+/* The capture is the object. A drawn monitor bezel around a real screenshot
+   is the single strongest "mockup template" tell, so the frame is just the
+   screenshot's own corner radius and a shadow that suggests a lit surface. */
+.device-bezel {
+  position: relative;
+  border-radius: clamp(12px, 1.3vw, 20px);
+  box-shadow: 0 60px 120px -50px rgba(0, 0, 0, .95);
+}
+.device-bezel .shot { border-radius: inherit; }
+.device-floor {
+  height: clamp(40px, 6vw, 90px);
+  margin-top: -1px;
+  background: radial-gradient(60% 100% at 50% 0%, rgba(120, 150, 200, .16), transparent 70%);
+  filter: blur(14px);
+}
+
+/* Floating cards are offset from the grid, not aligned to it */
+.float-card {
+  position: absolute;
+  margin: 0;
+  padding: 8px;
+  border-radius: clamp(14px, 1.6vw, 20px);
+  background: rgba(24, 24, 28, .55);
+  backdrop-filter: blur(26px) saturate(180%);
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, .2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .45),
+    0 30px 60px -24px rgba(0, 0, 0, .9);
+  width: clamp(150px, 22vw, 300px);
+  transform: rotate(var(--rot, 0deg));
+  transition: transform .6s var(--ease-apple);
+}
+.float-card img {
+  display: block; width: 100%; height: auto;
+  border-radius: clamp(8px, 1vw, 12px);
+  border: 1px solid rgba(255, 255, 255, .1);
+}
+/* A capture is a card, not a wallpaper: keep it small beside the device */
+.float-control {
+  width: clamp(210px, 26vw, 380px);
+}
+.float-control { --rot: 2.2deg; top: 9%; right: -2.5%; }
+
+/* The cards settle square when the hero is hovered: light, not a bounce */
+.hero-stage:hover .float-control { transform: rotate(0deg) translateY(-6px); }
+
+.scroll-cue {
+  display: grid; place-items: center;
+  padding-bottom: 26px;
+  opacity: .55;
+}
+.scroll-cue span {
+  width: 1px; height: 34px;
+  background: linear-gradient(180deg, transparent, var(--ink-3));
+  position: relative;
+  overflow: hidden;
+}
+.scroll-cue span::after {
+  content: "";
+  position: absolute; left: 0; top: -34px;
+  width: 1px; height: 34px;
+  background: linear-gradient(180deg, transparent, var(--ink));
+  animation: cue 2.6s var(--ease-out) infinite;
+}
+@keyframes cue {
+  0% { transform: translateY(0); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(68px); opacity: 0; }
+}
+
+/* -------------------------------------------------------------------------
+   7. Screenshot slots
+   ------------------------------------------------------------------------- */
+.shot {
+  position: relative;
+  margin: 0;
+  display: grid; place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background:
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 16px),
+    linear-gradient(160deg, #1a1a1f, #0e0e11);
+  border: 1px solid rgba(255, 255, 255, .08);
+}
+.shot-desktop { aspect-ratio: 16 / 10; }
+/* A filled slot: the real capture sets the box, no placeholder label. The
+   ratio classes and the light-band tint must not repaint a real capture, so
+   the filled state wins over both. */
+.shot-real,
+.shot-real.shot-music,
+.section--light .shot-real {
+  aspect-ratio: auto;
+  display: block;
+  background: none;
+  border: 0;
+}
+.shot-real img {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius);
+}
+.shot-square { aspect-ratio: 4 / 3; }
+.shot-app { aspect-ratio: 4 / 3; }
+.shot-music { aspect-ratio: 16 / 10; }
+
+.shot-label {
+  font-size: var(--t-micro);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 7px 15px;
+  border-radius: 980px;
+  border: 1px dashed rgba(255, 255, 255, .16);
+  background: rgba(255, 255, 255, .03);
+}
+
+/* App slots carry a faint hue so the row reads as five products */
+.shot-calendar { background: repeating-linear-gradient(135deg, rgba(255, 90, 90, .06) 0 1px, transparent 1px 16px), linear-gradient(160deg, #2a1618, #120f10); }
+.shot-weather  { background: repeating-linear-gradient(135deg, rgba(90, 176, 255, .06) 0 1px, transparent 1px 16px), linear-gradient(160deg, #101f2e, #0c1015); }
+.shot-calc     { background: repeating-linear-gradient(135deg, rgba(255, 190, 90, .06) 0 1px, transparent 1px 16px), linear-gradient(160deg, #2a2214, #131110); }
+.shot-todo     { background: repeating-linear-gradient(135deg, rgba(150, 120, 255, .06) 0 1px, transparent 1px 16px), linear-gradient(160deg, #1d182c, #100f14); }
+.shot-music    { background: repeating-linear-gradient(135deg, rgba(255, 110, 170, .06) 0 1px, transparent 1px 16px), linear-gradient(160deg, #24151f, #100d10); }
+
+/* -------------------------------------------------------------------------
+   8. Statement
+   ------------------------------------------------------------------------- */
+.statement {
+  padding: clamp(90px, 15vw, 200px) 0 clamp(80px, 12vw, 160px);
+  text-align: center;
+}
+.statement-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.6vw, 3rem);
+  line-height: 1.22;
+  font-weight: 600;
+  letter-spacing: -.012em;
+  text-wrap: balance;
+}
+.statement-text span {
+  color: var(--ink-3);
+  display: inline-block;
+}
+
+/* -------------------------------------------------------------------------
+   9. Section frame
+   ------------------------------------------------------------------------- */
+.section {
+  position: relative;
+  padding: var(--section-y) 0;
+  scroll-margin-top: calc(var(--subnav-h) + 6px);
+}
+/* Apple's eyebrow is the large text item above a headline — 21px, weight 600,
+   white, positively tracked. It is not a muted caption. */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--t-eyebrow);
+  font-weight: 600;
+  line-height: 1.19;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--ink);
+  margin-bottom: clamp(12px, 1.6vw, 18px);
+}
+.section > .wrap > h2 + .section-lead { margin-top: 22px; }
+.section-lead {
+  max-width: 60ch;
+  font-size: var(--t-body);
+  line-height: 1.48;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+/* The one place a genuinely large paragraph belongs, as on Apple's page */
+.statement .statement-text {
+  font-size: var(--t-lead);
+  line-height: 1.14;
+  letter-spacing: -.01em;
+}
+.section + .section { border-top: 0; }
+
+/* Alternating bands. The page breathes on contrast between them, which a
+   uniformly dark page never does. */
+.section { background: var(--band-dark); }
+.section--raised { background: var(--band-raised); }
+.section--light {
+  background: var(--band-light);
+  color: var(--ink-on-light);
+}
+.section--light .eyebrow,
+.section--light h1,
+.section--light h2,
+.section--light h3,
+.section--light .music-copy h2 { color: var(--ink-on-light); }
+.section--light .section-lead,
+.section--light .g-card p,
+.section--light .music-copy .section-lead { color: var(--ink-on-light-2); }
+.section--light .g-card h3 { color: var(--ink-on-light); }
+.section--light .link { color: #0066cc; }
+.section--light .link.arrow::after { border-color: #0066cc; }
+.section--light .shot {
+  background: rgba(0, 0, 0, .04);
+  border-color: rgba(0, 0, 0, .08);
+}
+.section--light .shot-label {
+  color: var(--ink-on-light-2);
+  border-color: rgba(0, 0, 0, .18);
+  background: rgba(255, 255, 255, .7);
+}
+.section--light .spec-strip { border-color: rgba(0, 0, 0, .12); }
+.section--light .spec-strip > div + div { border-left-color: rgba(0, 0, 0, .12); }
+.section--light .spec-strip dt,
+.section--light .spec-strip sup.plus { color: var(--ink-on-light-2); }
+.section--light .install-block { background: #fff; border-color: rgba(0, 0, 0, .1); }
+.section--light .install-head { border-color: rgba(0, 0, 0, .1); color: var(--ink-on-light-2); }
+.section--light .install-block pre { color: #1d1d1f; }
+.section--light .install-note { color: var(--ink-on-light-2); }
+.section--light .install-note code { background: rgba(0, 0, 0, .06); color: #1d1d1f; }
+.section--light .copy { color: var(--ink-on-light-2); border-color: rgba(0, 0, 0, .18); }
+.section--light .copy:hover { color: #1d1d1f; }
+
+/* -------------------------------------------------------------------------
+   10. Highlights carousel
+   ------------------------------------------------------------------------- */
+.highlights { background: var(--band-raised); }
+.highlights h2 { margin-bottom: clamp(28px, 4vw, 40px); }
+
+.tabs {
+  display: flex; gap: 9px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 1px 1px 3px;
+  mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 36px), transparent 100%);
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tabs .pill { font-size: .875rem; padding: 9px 19px; }
+
+.stage {
+  position: relative;
+  margin-top: 18px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #101013;
+  border: 1px solid var(--line);
+  box-shadow: 0 60px 120px -60px rgba(0, 0, 0, 1);
+  isolation: isolate;
+}
+.stage-track {
+  display: flex;
+  transition: transform .68s var(--ease-apple);
+  will-change: transform;
+}
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 0;
+  padding: clamp(28px, 5vw, 64px);
+  text-align: center;
+  isolation: isolate;
+}
+.slide::before {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: -2;
+  background: var(--slide-bg);
+  transform: scale(1.02);
+}
+/* A soft vignette keeps the centred plate legible over any artwork */
+.slide::after {
+  content: "";
+  position: absolute; inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(70% 60% at 50% 118%, rgba(0, 0, 0, .55), transparent 70%),
+    radial-gradient(60% 60% at 50% -10%, rgba(0, 0, 0, .28), transparent 70%);
+}
+.slide h3 {
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
+  line-height: 1.22;
+  letter-spacing: -.012em;
+  max-width: 20ch;
+  text-shadow: 0 1px 24px rgba(0, 0, 0, .35);
+}
+.slide > p {
+  margin-top: 14px;
+  max-width: 46ch;
+  font-size: .9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, .74);
+}
+.slide-plate {
+  margin-top: clamp(22px, 3.4vw, 38px);
+  width: min(480px, 88%);
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 20px 24px;
+  border-radius: 22px;
+  text-align: left;
+  font-size: .9375rem;
+  background: rgba(26, 26, 30, .42);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, .24);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .5),
+    inset 0 -20px 34px -24px rgba(255, 255, 255, .2),
+    0 30px 60px -26px rgba(0, 0, 0, .8);
+}
+.slide-plate span { color: rgba(255, 255, 255, .94); }
+.stage-controls {
+  position: absolute; left: 50%; bottom: 18px;
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px;
+  border-radius: 980px;
+}
+.dots { display: flex; align-items: center; gap: 7px; padding-inline: 8px; }
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(255, 255, 255, .32);
+  transition: width .32s var(--ease-apple), background-color .32s ease;
+}
+.dot:hover { background: rgba(255, 255, 255, .6); }
+.dot[aria-current="true"] { width: 24px; border-radius: 980px; background: #f5f5f7; }
+.stage-toggle {
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .16);
+  transition: background-color .2s ease;
+}
+.stage-toggle:hover { background: rgba(255, 255, 255, .2); }
+.pause-icon {
+  width: 7px; height: 9px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.stage-toggle[aria-pressed="true"] .pause-icon {
+  width: 0; height: 0; border: 0;
+  border-left: 9px solid #fff;
+  border-top: 5.5px solid transparent;
+  border-bottom: 5.5px solid transparent;
+  border-right: 0;
+  margin-left: 2px;
+}
+
+/* -------------------------------------------------------------------------
+   11. Design + glass lab
+   ------------------------------------------------------------------------- */
+.glass-lab {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: clamp(32px, 4vw, 48px);
+}
+@media (max-width: 860px) { .glass-lab { grid-template-columns: 1fr; } }
+
+/* Real captures keep their own ratio and corner radius; nothing is faked */
+.feature-media {
+  margin: clamp(32px, 4.5vw, 52px) 0 0;
+  border-radius: clamp(16px, 2vw, 28px);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #0d0d10;
+}
+.feature-media img { width: 100%; height: auto; display: block; }
+.glass-preview {
+  position: relative;
+  min-height: clamp(300px, 34vw, 420px);
+  display: grid; place-items: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  isolation: isolate;
+}
+.glass-wall {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(50% 56% at 22% 28%, #5f8ed0, transparent 66%),
+    radial-gradient(46% 50% at 80% 24%, #cf8f7b, transparent 66%),
+    radial-gradient(56% 58% at 56% 96%, #5f9e88, transparent 70%),
+    #0c0d11;
+}
+/* Soft bodies behind the glass; they are what the glass bends */
+.glass-wall i { position: absolute; border-radius: 50%; filter: blur(4px); }
+.glass-wall i:nth-child(1) { width: 34%; aspect-ratio: 1; left: 10%; top: 14%; background: radial-gradient(circle at 34% 30%, #ffe4c4, #ab6a45); }
+.glass-wall i:nth-child(2) { width: 26%; aspect-ratio: 1; right: 12%; top: 20%; background: radial-gradient(circle at 34% 30%, #d7ecff, #48779f); }
+.glass-wall i:nth-child(3) { width: 40%; aspect-ratio: 1; left: 36%; bottom: -18%; background: radial-gradient(circle at 34% 30%, #c8f0de, #39745d); }
+
+.glass-sample {
+  position: relative;
+  width: min(330px, 70%);
+  aspect-ratio: 1.55;
+  display: grid; place-items: center;
+  border-radius: 30px;
+  font-size: .875rem;
+  color: rgba(255, 255, 255, .95);
+  background: rgba(255, 255, 255, var(--tint, .12));
+  backdrop-filter: blur(var(--blur, 22px)) saturate(var(--sat, 180%));
+  -webkit-backdrop-filter: blur(var(--blur, 22px)) saturate(var(--sat, 180%));
+  border: 1px solid rgba(255, 255, 255, .34);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .65),
+    inset 0 -28px 44px -28px rgba(255, 255, 255, .38),
+    0 30px 60px -26px rgba(0, 0, 0, .8);
+}
+.glass-caption {
+  position: absolute; left: 0; right: 0; bottom: 16px;
+  text-align: center;
+  font-size: var(--t-micro);
+  color: rgba(255, 255, 255, .55);
+}
+
+.glass-controls {
+  display: flex; flex-direction: column; justify-content: center;
+  gap: clamp(20px, 2.6vw, 28px);
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--radius-lg);
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+}
+.glass-controls-head p:last-child {
+  margin-top: 10px;
+  font-size: .9375rem; line-height: 1.55; color: var(--ink-2);
+}
+
+/* Presets: exactly the three in Settings → Appearance */
+.preset-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.preset {
+  padding: 8px 14px;
+  border-radius: 980px;
+  font-size: var(--t-small);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .04);
+  transition: background .2s var(--ease-out), color .2s var(--ease-out), border-color .2s var(--ease-out);
+}
+.preset:hover { color: var(--ink); border-color: rgba(255, 255, 255, .26); }
+.preset[aria-pressed="true"] {
+  color: #0a0a0b;
+  background: #f5f5f7;
+  border-color: transparent;
+}
+.preset:active { transform: scale(.97); }
+.glass-control { display: flex; flex-direction: column; gap: 12px; }
+.control-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  font-size: var(--t-small); color: var(--ink-2);
+}
+.control-row output {
+  font-variant-numeric: tabular-nums;
+  font-size: var(--t-small);
+  color: var(--ink);
+}
+
+/* Range slider: glass track, solid thumb with a contact shadow */
+.glass-control input[type="range"] {
+  -webkit-appearance: none; appearance: none;
+  width: 100%; height: 5px;
+  border-radius: 980px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .5);
+  outline-offset: 10px;
+}
+.glass-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 21px; height: 21px;
+  border-radius: 50%;
+  background: #f5f5f7;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .55), inset 0 1px 0 #fff;
+  transition: transform .15s var(--ease-out);
+}
+.glass-control input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.12); }
+.glass-control input[type="range"]::-moz-range-thumb {
+  width: 21px; height: 21px;
+  border-radius: 50%;
+  background: #f5f5f7;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .55);
+}
+.control-note {
+  font-size: var(--t-small);
+  line-height: 1.55;
+  color: var(--ink-3);
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
+}
+
+/* -------------------------------------------------------------------------
+   12. Horizontal galleries
+   ------------------------------------------------------------------------- */
+/* Full-bleed scroller: the next card peeks past the edge, so the row
+   visibly continues. Padding-inline aligns card one with the grid. */
+.gallery-wrap {
+  margin-top: clamp(40px, 6vw, 64px);
+  padding-inline: max(var(--gutter), calc((100% - var(--measure)) / 2));
+  overflow: hidden;
+}
+.gallery {
+  display: flex;
+  gap: clamp(14px, 1.6vw, 20px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, .18) transparent;
+}
+.gallery::-webkit-scrollbar { height: 6px; }
+.gallery::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, .18); border-radius: 980px; }
+/* Four equal cards fill the measure: the copy under each card stays whole.
+   A clipped card is fine for an image-only row; here it cut sentences. */
+.gallery > * {
+  flex: 0 0 calc((100% - clamp(28px, 3.2vw, 40px) * 3) / 4);
+  scroll-snap-align: start;
+}
+/* Card text never sits inside the scroller's snap box unevenly: the media
+   block owns the ratio, the copy below may differ in height between languages */
+.g-card { display: flex; flex-direction: column; }
+.g-card .shot { flex: 0 0 auto; }
+.g-card h3 { margin-top: clamp(16px, 2vw, 22px); }
+/* App icon sits in the heading, optically aligned to the cap height */
+.g-card h3 .app-ic {
+  display: inline-block;
+  width: 1.05em; height: 1.05em;
+  margin-right: .5em;
+  vertical-align: -.12em;
+  border-radius: .24em;
+}
+.music-copy h2 .app-ic {
+  display: block;
+  width: .78em; height: .78em;
+  margin-bottom: .28em;
+  border-radius: .22em;
+}
+.g-card p {
+  margin-top: 8px;
+  font-size: .9375rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+/* -------------------------------------------------------------------------
+   13. Apps + music
+   ------------------------------------------------------------------------- */
+.apps { background: var(--band-light); }
+.music-block {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  margin-top: clamp(64px, 10vw, 120px);
+  padding-top: clamp(56px, 8vw, 96px);
+  border-top: 1px solid var(--line);
+}
+.music-copy h2 { margin-bottom: 20px; }
+.music-copy .link { margin-top: 24px; }
+
+/* -------------------------------------------------------------------------
+   14. And so much more — icon grid with glass tiles
+   ------------------------------------------------------------------------- */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(30px, 4vw, 48px) clamp(24px, 3.4vw, 44px);
+  margin-top: clamp(40px, 6vw, 64px);
+}
+.more-item { display: flex; flex-direction: column; gap: 14px; }
+.tile {
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, .9);
+  /* Apple's "And so much more" glyphs are flat coloured marks, not glass
+     chips: the grid reads as content, not as UI. */
+  background: linear-gradient(155deg, #3a6fd8, #2a56ad);
+  box-shadow: none;
+  transition: transform .35s var(--ease-out);
+}
+.more-item:hover .tile { transform: translateY(-2px); border-color: rgba(255, 255, 255, .3); }
+.tile svg { width: 24px; height: 24px; }
+/* Measured from Apple's grid: the whole block is 17px/600, the lead-in is
+   white and the remainder is that same weight in a secondary grey. */
+.more-item p {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -.014em;
+  color: var(--ink-on-light-2);
+  text-wrap: pretty;
+}
+.section--light .more-item p { color: var(--ink-on-light-2); }
+.more-item strong {
+  color: var(--ink);
+  font-weight: 600;
+  margin-right: .18em;
+}
+.section--light .more-item strong { color: var(--ink-on-light); }
+
+/* -------------------------------------------------------------------------
+   15. Compatibility
+   ------------------------------------------------------------------------- */
+.compat { background: var(--band-light); }
+.spec-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: clamp(32px, 4.5vw, 48px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.spec-strip > div { padding: clamp(18px, 2.4vw, 26px) 0; }
+.spec-strip > div + div {
+  padding-left: clamp(16px, 2.4vw, 28px);
+  border-left: 1px solid var(--line);
+}
+.spec-strip dt {
+  font-size: var(--t-small);
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.spec-strip dd {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  font-weight: 600;
+  letter-spacing: -.014em;
+  font-variant-numeric: tabular-nums;
+}
+.spec-strip sup.plus { font-size: .55em; vertical-align: super; color: var(--ink-2); line-height: 0; }
+
+/* One panel, centred headline, three columns of environments — the shape
+   apple.com/os/macos uses for its compatibility block. */
+.compat-panel {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding: clamp(48px, 7vw, 96px) clamp(24px, 4vw, 56px);
+  border-radius: clamp(24px, 3vw, 40px);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .06);
+  text-align: center;
+}
+.compat-panel-title {
+  max-width: 22ch;
+  margin: 0 auto;
+  font-size: var(--t-h2);
+  line-height: 1.12;
+}
+.compat-panel .button { margin-top: clamp(20px, 2.4vw, 28px); }
+/* The spec strip sits inside the card now: Apple's card is a single object,
+   not a section title over a list. */
+.compat-panel .spec-strip {
+  max-width: 780px;
+  margin: clamp(32px, 4vw, 44px) auto 0;
+  border-color: rgba(0, 0, 0, .1);
+}
+.compat-panel .spec-strip > div + div { border-left-color: rgba(0, 0, 0, .1); }
+.compat-panel .spec-strip dt { color: #6e6e73; }
+.compat-panel .spec-strip sup.plus { color: #6e6e73; }
+.compat-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px clamp(24px, 4vw, 56px);
+  max-width: 780px;
+  margin: clamp(28px, 3.6vw, 40px) auto 0;
+  text-align: left;
+}
+.compat-note {
+  max-width: 62ch;
+  margin: clamp(28px, 3.4vw, 36px) auto 0;
+  font-size: var(--t-small);
+  line-height: 1.6;
+  color: #86868b;
+  text-wrap: pretty;
+}
+.compat-cols li {
+  font-size: 1.0625rem;
+  line-height: 1.35;
+  color: var(--ink-on-light-2);
+}
+.compat-cols li span {
+  display: block;
+  margin-top: 3px;
+  font-size: var(--t-small);
+  color: #86868b;
+}
+.compat-cols .link { font-size: 1.0625rem; }
+/* The install command: monospaced, selectable, one copy button */
+.install-block {
+  margin-top: clamp(40px, 5.5vw, 64px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: #0b0b0d;
+  overflow: hidden;
+}
+.install-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--t-small);
+  color: var(--ink-3);
+}
+.copy {
+  padding: 5px 12px;
+  border-radius: 980px;
+  font-size: var(--t-micro);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  transition: color .18s ease, border-color .18s ease;
+}
+.copy:hover { color: var(--ink); border-color: rgba(255, 255, 255, .3); }
+.install-block pre {
+  margin: 0;
+  padding: 20px clamp(16px, 2.4vw, 24px);
+  overflow-x: auto;
+  font-size: .875rem;
+  line-height: 1.85;
+  color: var(--ink-2);
+  tab-size: 2;
+}
+.install-block code { font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace); }
+.install-note {
+  padding: 0 clamp(16px, 2.4vw, 24px) 18px;
+  font-size: var(--t-small);
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+.install-note code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .07);
+  color: var(--ink-2);
+}
+
+/* -------------------------------------------------------------------------
+   16. Developers + Get
+   ------------------------------------------------------------------------- */
+.dev-mark { filter: none; margin-bottom: clamp(24px, 3vw, 32px); opacity: .92; }
+.dev-links { display: flex; flex-wrap: wrap; gap: clamp(20px, 3vw, 32px); margin-top: 28px; }
+
+.get {
+  position: relative;
+  text-align: center;
+  overflow: clip;
+  isolation: isolate;
+  padding-bottom: clamp(96px, 14vw, 180px);
+}
+.get-halo {
+  position: absolute; z-index: -1;
+  left: 50%; bottom: -40%;
+  width: min(1200px, 130vw); height: 700px;
+  transform: translateX(-50%);
+  background: radial-gradient(46% 50% at 50% 52%, rgba(0, 0, 0, .05), transparent 72%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+.get-mark { margin: 0 auto clamp(20px, 3vw, 28px); filter: none; }
+.get .section-lead { margin-inline: auto; }
+.get-actions {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: clamp(18px, 3vw, 30px);
+  margin-top: clamp(28px, 4vw, 38px);
+}
+.get-note {
+  margin-top: clamp(36px, 5vw, 52px);
+  font-size: var(--t-micro);
+  letter-spacing: .03em;
+  color: var(--ink-on-light-2);
+}
+
+/* -------------------------------------------------------------------------
+   17. Footer
+   ------------------------------------------------------------------------- */
+/* Apple's footer continues the light body rather than returning to black:
+   measured bg #f5f5f7, 12px text at rgba(0,0,0,.56). */
+.footer {
+  background: var(--band-light);
+  color: var(--ink-on-light-2);
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  padding: clamp(44px, 6vw, 64px) 0 40px;
+  font-size: var(--t-small);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.7fr repeat(4, 1fr);
+  gap: clamp(24px, 3vw, 36px);
+  padding-bottom: clamp(28px, 4vw, 40px);
+}
+.footer-col { display: flex; flex-direction: column; gap: 11px; }
+.footer-col h3 {
+  font-size: var(--t-small);
+  font-weight: 600;
+  color: var(--ink-on-light);
+  margin-bottom: 2px;
+}
+.footer-col a { transition: color .18s ease; }
+.footer-col a:hover { color: var(--ink-on-light); text-decoration: underline; text-underline-offset: 3px; }
+.footer-brand p {
+  margin-top: 12px;
+  max-width: 28ch;
+  line-height: 1.6;
+  color: var(--ink-on-light-2);
+}
+.footer .brand img { filter: none; }
+.footer-note {
+  padding: 24px 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  font-size: var(--t-micro);
+  line-height: 1.7;
+  color: var(--ink-on-light-2);
+  max-width: 92ch;
+}
+.footer-legal {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  font-size: var(--t-micro);
+  color: var(--ink-on-light-2);
+}
+
+/* -------------------------------------------------------------------------
+   18. Reveal
+   ------------------------------------------------------------------------- */
+.reveal { opacity: 1; }
+.motion-ready .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity .9s var(--ease-out),
+    transform .9s var(--ease-out);
+  transition-delay: var(--delay, 0ms);
+}
+.motion-ready .reveal.in-view { opacity: 1; transform: none; }
+
+/* -------------------------------------------------------------------------
+   19. Responsive
+   ------------------------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .footer-grid { grid-template-columns: 1.5fr repeat(2, 1fr); }
+  .footer-brand { grid-column: 1 / -1; }
+  .glass-lab { grid-template-columns: 1fr; }
+  .glass-preview { min-height: 300px; }
+  .more-grid { grid-template-columns: 1fr 1fr; }
+  .gallery > * { flex-basis: calc((100% - 20px) / 2); }
+}
+
+@media (max-width: 760px) {
+  :root { --subnav-h: 60px; }
+  .nav-links { display: none; }
+  .sub-nav-inner { justify-content: flex-start; }
+  .float-card { display: none; }
+  .device-floor { display: none; }
+  .hero-stage { padding-bottom: 0; }
+  .statement-text span { display: block; }
+  .slide { aspect-ratio: 4 / 5; padding: 26px 20px 68px; }
+  .slide h3 { font-size: 1.1875rem; max-width: none; }
+  .slide > p { font-size: .875rem; }
+  .slide-plate { width: 100%; padding: 15px 17px; font-size: .8125rem; gap: 12px; }
+  .slide-plate span { font-size: .8125rem; }
+  .stage-controls { bottom: 14px; }
+  .gallery-wrap { padding-inline: var(--gutter); }
+  .gallery > * { flex-basis: 82%; }
+  .music-block { grid-template-columns: 1fr; }
+  .more-grid { grid-template-columns: 1fr; gap: 28px; }
+  .more-item { flex-direction: row; align-items: flex-start; gap: 16px; }
+  .more-item p { padding-top: 2px; }
+  .tile { flex-shrink: 0; }
+  .spec-strip { grid-template-columns: 1fr 1fr; }
+  .spec-strip > div:nth-child(3) { border-left: 1px solid var(--line); border-top: 1px solid var(--line); }
+  .spec-strip > div:nth-child(4) { border-top: 1px solid var(--line); }
+  .spec-strip > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .compat-panel { padding: clamp(40px, 9vw, 64px) 22px; }
+  .compat-cols { grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+  .compat-cols li, .compat-cols .link { font-size: 1rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-legal { flex-direction: column; gap: 6px; }
+}
+
+@media (max-width: 420px) {
+  .compat-panel .spec-strip { grid-template-columns: 1fr 1fr; }
+  .hero h1 { font-size: clamp(2.1rem, 9.6vw, 2.5rem); }
+  .button { font-size: .875rem; padding-inline: 18px; }
+  .float-card { display: none; }
+  .link { font-size: .9375rem; }
+  .spec-strip dd { font-size: 1.125rem; }
+}
+
+/* -------------------------------------------------------------------------
+   20. Preferences
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .stage-track { transition: none; }
+  .motion-ready .reveal { opacity: 1; transform: none; }
+  .hero h1 .sheen { animation: none; background-position: 30% 50%; }
+  .scroll-cue { display: none; }
+}
+
+/* Glass becomes frosted and opaque rather than disappearing */
+@media (prefers-reduced-transparency: reduce) {
+  .global-nav, .sub-nav {
+    background: #000;
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+  }
+  .pill, .stage-controls, .tile, .float-card, .slide-plate {
+    background: #232327;
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+    border-color: rgba(255, 255, 255, .3);
+  }
+  .glass-sample {
+    background: #2b2b31;
+    backdrop-filter: none; -webkit-backdrop-filter: none;
+  }
+  .glass-wall { filter: saturate(.55) brightness(.6); }
+  .hero-halo, .get-halo { display: none; }
+  .grain { display: none; }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --ink-2: rgba(255, 255, 255, .84);
+    --ink-3: rgba(255, 255, 255, .68);
+    --ink-4: rgba(255, 255, 255, .56);
+    --line: rgba(255, 255, 255, .34);
+    --glass-border: rgba(255, 255, 255, .5);
+  }
+  .pill { background: rgba(255, 255, 255, .16); }
+  .shot { border-color: rgba(255, 255, 255, .3); }
+  .shot-label { border-style: solid; }
+}
