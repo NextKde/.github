@@ -1,5 +1,7 @@
 # NextKde
 
+[官网 / Website](https://nextkde.github.io/.github/)
+
 A Quickshell desktop for KDE Plasma.
 
 NextKde brings a top bar, floating dock, launcher, search, notifications, desktop widgets, and settings together on KDE Plasma 6 Wayland. It combines liquid glass and customizable appearance with native KWin integration.
